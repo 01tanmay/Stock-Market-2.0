@@ -29,25 +29,14 @@ export class LoginComponent implements OnInit {
     console.log("Entering Validation")
     console.log(this.username + " " + this.password)
 
-    /** 
-    if (this.authenticateService.authenticateUser(this.username, this.password)) {
-      console.log("valid user")
-      this.invalidLogin = false;
-      this.router.navigate(['welcome']);
-    } else {
-      this.invalidLogin = true;
-    }**/
     this.authService.login(this.username, this.password).subscribe(
       data => {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
-
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        //this.roles = this.tokenStorage.getUser().roles;
         this.reloadPage();
         console.log('before routing');
-       //this.routerservice.routeToHome();
       },
       err => {
         this.errorMessage = err.error.message;
@@ -56,11 +45,11 @@ export class LoginComponent implements OnInit {
       
     );
     this.router.navigate(['welcome']);
+    sessionStorage.setItem('user', this.username);
   }
 
    reloadPage(): void {
     console.log('inside reload');
     window.location.reload();
-    
   }
 }

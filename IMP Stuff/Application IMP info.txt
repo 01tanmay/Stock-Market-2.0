@@ -2,12 +2,12 @@ Repository Description
 
 Zuul API-Gatway: 8080 -> 
 
-User Auth with JWT: 8081 -> Aurora/MySQL
+User Auth with JWT: 8081 -> AWS RDS Aurora: MySQL
 -> http://18.116.200.244:8081/
 
-Stock-Details Service: 8082 -> AWS DocumentDB
+Stock-Details Service: 8082 -> AWS DocumentDB: NoSQL mongoDB
 
-Company-Details Service: 8083 -> AWS DocumentDB
+Company-Details Service: 8083 -> AWS RDS Aurora: MySQL 
 
 Eureka Discovery-Server: 8761 -> 
 
@@ -26,4 +26,6 @@ http://ec2-3-14-150-134.us-east-2.compute.amazonaws.com:5601/
 mongo: 27017
 ec2-user@ec2-3-141-196-221.us-east-2.compute.amazonaws.com
 
-SQL: 3306
+MySQL: 3306
+jdbc:mysql://stock-market-instance-1.cferskbvxtzo.us-east-2.rds.amazonaws.com:3306/stock-market?useSSL=false
+root/tanmay123

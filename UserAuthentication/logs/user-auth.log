@@ -1240,3 +1240,166 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
                 Unauthorized error: Full authentication is required to access this resource
 2021-08-13 20:16:02 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool -
                 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30m51s356ms620µs200ns).
+2021-08-16 23:47:59 [main] INFO  c.m.u.UserAuthenticationApplication -
+                Starting UserAuthenticationApplication on TechRider with PID 6012 (started by tsd01 in D:\WORK\Workspaces\myWorkspace\Stock Market 2.0\UserAuthentication)
+2021-08-16 23:47:59 [main] INFO  c.m.u.UserAuthenticationApplication -
+                No active profile set, falling back to default profiles: default
+2021-08-16 23:48:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-16 23:48:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 124ms. Found 2 repository interfaces.
+2021-08-16 23:48:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2b667ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:48:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9b643027] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:48:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:48:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5e5ddfbc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:48:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$c038d2d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:48:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:48:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8081 (http)
+2021-08-16 23:48:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8081"]
+2021-08-16 23:48:03 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2021-08-16 23:48:03 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.24]
+2021-08-16 23:48:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2021-08-16 23:48:03 [main] INFO  o.s.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 4214 ms
+2021-08-16 23:48:04 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2021-08-16 23:48:08 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2021-08-16 23:48:08 [main] INFO  o.h.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-16 23:48:08 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.3.11.Final}
+2021-08-16 23:48:08 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2021-08-16 23:48:09 [main] INFO  o.h.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-16 23:48:09 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-08-16 23:48:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-16 23:48:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration -
+                spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-16 23:48:16 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver -
+                Exposing 16 endpoint(s) beneath base path '/actuator'
+2021-08-16 23:48:16 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on com.market.userauth.config.ActuatorSecurityConfig$$EnhancerBySpringCGLIB$$9faab143@4accc3de, so it cannot be used on com.market.userauth.security.WebSecurityConfig$$EnhancerBySpringCGLIB$$f584d190@68423388 too.
+2021-08-16 23:48:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -
+                Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-16 23:48:16 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Shutdown initiated...
+2021-08-16 23:48:19 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Shutdown completed.
+2021-08-16 23:48:19 [main] INFO  o.a.catalina.core.StandardService -
+                Stopping service [Tomcat]
+2021-08-16 23:48:19 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+                
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-16 23:48:19 [main] ERROR o.s.boot.SpringApplication -
+                Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on com.market.userauth.config.ActuatorSecurityConfig$$EnhancerBySpringCGLIB$$9faab143@4accc3de, so it cannot be used on com.market.userauth.security.WebSecurityConfig$$EnhancerBySpringCGLIB$$f584d190@68423388 too.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.market.userauth.UserAuthenticationApplication.main(UserAuthenticationApplication.java:16)
+Caused by: java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on com.market.userauth.config.ActuatorSecurityConfig$$EnhancerBySpringCGLIB$$9faab143@4accc3de, so it cannot be used on com.market.userauth.security.WebSecurityConfig$$EnhancerBySpringCGLIB$$f584d190@68423388 too.
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.setFilterChainProxySecurityConfigurer(WebSecurityConfiguration.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:708)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	... 17 common frames omitted
+2021-08-16 23:50:35 [main] INFO  c.m.u.UserAuthenticationApplication -
+                Starting UserAuthenticationApplication on TechRider with PID 14500 (started by tsd01 in D:\WORK\Workspaces\myWorkspace\Stock Market 2.0\UserAuthentication)
+2021-08-16 23:50:35 [main] INFO  c.m.u.UserAuthenticationApplication -
+                No active profile set, falling back to default profiles: default
+2021-08-16 23:50:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-16 23:50:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 135ms. Found 2 repository interfaces.
+2021-08-16 23:50:38 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4e3bfc43] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:50:38 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$e6e9c47d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:50:38 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:50:38 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@42fc4ac4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:50:38 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bbe672f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:50:38 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-16 23:50:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8081 (http)
+2021-08-16 23:50:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8081"]
+2021-08-16 23:50:39 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2021-08-16 23:50:39 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.24]
+2021-08-16 23:50:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2021-08-16 23:50:39 [main] INFO  o.s.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 3971 ms
+2021-08-16 23:50:40 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2021-08-16 23:50:46 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2021-08-16 23:50:46 [main] INFO  o.h.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-16 23:50:46 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.3.11.Final}
+2021-08-16 23:50:46 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2021-08-16 23:50:46 [main] INFO  o.h.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-16 23:50:47 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-08-16 23:50:52 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-16 23:50:53 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration -
+                spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-16 23:50:53 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver -
+                Exposing 16 endpoint(s) beneath base path '/actuator'
+2021-08-16 23:50:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a0b925a, org.springframework.security.web.context.SecurityContextPersistenceFilter@28d74041, org.springframework.security.web.header.HeaderWriterFilter@54e39504, org.springframework.web.filter.CorsFilter@14b4f462, org.springframework.security.web.authentication.logout.LogoutFilter@7ef570be, com.market.userauth.security.jwt.AuthTokenFilter@2e2546bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cbf9aee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ba90170, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42718ebf, org.springframework.security.web.session.SessionManagementFilter@721f3526, org.springframework.security.web.access.ExceptionTranslationFilter@58ec04f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b1bb01c]
+2021-08-16 23:50:54 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-16 23:50:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8081"]
+2021-08-16 23:50:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-16 23:50:55 [main] INFO  c.m.u.UserAuthenticationApplication -
+                Started UserAuthenticationApplication in 20.108 seconds (JVM running for 20.967)

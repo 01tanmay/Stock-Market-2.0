@@ -1532,3 +1532,145 @@ Caused by: java.net.SocketTimeoutException: Connect timed out
                 Request method 'GET' not supported
 2021-08-13 12:47:02 [http-nio-8082-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
                 Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-08-17 00:00:44 [restartedMain] INFO  c.e.m.stock.StockServiceApplication -
+                Starting StockServiceApplication on TechRider with PID 16208 (D:\WORK\Workspaces\myWorkspace\Stock Market 2.0\stockservice\target\classes started by tsd01 in D:\WORK\Workspaces\myWorkspace\Stock Market 2.0\stockservice)
+2021-08-17 00:00:44 [restartedMain] INFO  c.e.m.stock.StockServiceApplication -
+                No active profile set, falling back to default profiles: default
+2021-08-17 00:00:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -
+                Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-17 00:00:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -
+                For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-17 00:00:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-08-17 00:00:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 91ms. Found 1 MongoDB repository interfaces.
+2021-08-17 00:00:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8082 (http)
+2021-08-17 00:00:48 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8082"]
+2021-08-17 00:00:48 [restartedMain] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2021-08-17 00:00:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-08-17 00:00:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2021-08-17 00:00:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 3511 ms
+2021-08-17 00:00:49 [restartedMain] INFO  org.mongodb.driver.cluster -
+                Cluster created with settings {hosts=[3.141.196.221:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-08-17 00:00:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -
+                LiveReload server is running on port 35729
+2021-08-17 00:00:49 [cluster-ClusterId{value='611aaed9b02c7065708d9427', description='null'}-3.141.196.221:27017] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:1, serverValue:240}] to 3.141.196.221:27017
+2021-08-17 00:00:50 [cluster-ClusterId{value='611aaed9b02c7065708d9427', description='null'}-3.141.196.221:27017] INFO  org.mongodb.driver.cluster -
+                Monitor thread successfully connected to server with description ServerDescription{address=3.141.196.221:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=285104300}
+2021-08-17 00:00:50 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver -
+                Exposing 15 endpoint(s) beneath base path '/actuator'
+2021-08-17 00:00:50 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-17 00:00:51 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: Ant [pattern='/api/**'], []
+2021-08-17 00:00:51 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c06ba38, org.springframework.security.web.context.SecurityContextPersistenceFilter@66353f91, org.springframework.security.web.header.HeaderWriterFilter@2b29fb16, org.springframework.web.filter.CorsFilter@6294dac4, org.springframework.security.web.csrf.CsrfFilter@48b19cf, org.springframework.security.web.authentication.logout.LogoutFilter@5a04f17e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@687a6821, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ef88194, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fa09b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1359370e, org.springframework.security.web.session.SessionManagementFilter@3adf7f8b, org.springframework.security.web.access.ExceptionTranslationFilter@152139da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a5e505a]
+2021-08-17 00:00:51 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8082"]
+2021-08-17 00:00:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8082 (http) with context path ''
+2021-08-17 00:00:51 [restartedMain] INFO  c.e.m.stock.StockServiceApplication -
+                Started StockServiceApplication in 7.711 seconds (JVM running for 8.87)
+2021-08-17 00:01:53 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-17 00:01:53 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2021-08-17 00:01:54 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 11 ms
+2021-08-17 00:02:23 [http-nio-8082-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
+                Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'startDate' is not present]
+2021-08-17 00:03:00 [http-nio-8082-exec-5] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:2, serverValue:241}] to 3.141.196.221:27017
+2021-08-17 00:03:00 [http-nio-8082-exec-5] INFO  c.e.m.s.s.i.StockExchangeServiceImpl -
+                StockExchange List from database []
+2021-08-17 00:03:00 [http-nio-8082-exec-5] INFO  c.e.m.s.controller.StockController -
+                Provided CompanyCode doesnot exists in DB
+2021-08-17 00:03:00 [http-nio-8082-exec-5] INFO  c.e.m.s.controller.StockController -
+                Response is : com.estock.market.stock.model.ErrorMessage@590b3c86
+2021-08-17 00:18:44 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-17 00:18:44 [Thread-4] INFO  org.mongodb.driver.connection -
+                Closed connection [connectionId{localValue:2, serverValue:241}] to 3.141.196.221:27017 because the pool has been closed.
+2021-08-17 00:31:43 [restartedMain] INFO  c.e.m.stock.StockServiceApplication -
+                Starting StockServiceApplication on TechRider with PID 16208 (D:\WORK\Workspaces\myWorkspace\Stock Market 2.0\stockservice\target\classes started by tsd01 in D:\WORK\Workspaces\myWorkspace\Stock Market 2.0\stockservice)
+2021-08-17 00:31:43 [restartedMain] INFO  c.e.m.stock.StockServiceApplication -
+                No active profile set, falling back to default profiles: default
+2021-08-17 00:31:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-08-17 00:31:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 13ms. Found 1 MongoDB repository interfaces.
+2021-08-17 00:31:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8082 (http)
+2021-08-17 00:31:44 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8082"]
+2021-08-17 00:31:44 [restartedMain] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2021-08-17 00:31:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-08-17 00:31:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2021-08-17 00:31:44 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 826 ms
+2021-08-17 00:31:44 [restartedMain] INFO  org.mongodb.driver.cluster -
+                Cluster created with settings {hosts=[3.141.196.221:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-08-17 00:31:44 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -
+                LiveReload server is running on port 35729
+2021-08-17 00:31:45 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver -
+                Exposing 15 endpoint(s) beneath base path '/actuator'
+2021-08-17 00:31:45 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-17 00:31:45 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: Ant [pattern='/api/**'], []
+2021-08-17 00:31:45 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45eb92ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@357f7e94, org.springframework.security.web.header.HeaderWriterFilter@7594b962, org.springframework.web.filter.CorsFilter@453a1017, org.springframework.security.web.csrf.CsrfFilter@29601a0a, org.springframework.security.web.authentication.logout.LogoutFilter@367ddb49, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a627a54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4376d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50cc9012, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36dac6ce, org.springframework.security.web.session.SessionManagementFilter@1c668758, org.springframework.security.web.access.ExceptionTranslationFilter@2f6fffd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1be55b3]
+2021-08-17 00:31:45 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8082"]
+2021-08-17 00:31:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8082 (http) with context path ''
+2021-08-17 00:31:45 [restartedMain] INFO  c.e.m.stock.StockServiceApplication -
+                Started StockServiceApplication in 1.608 seconds (JVM running for 1862.337)
+2021-08-17 00:31:45 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -
+                Condition evaluation unchanged
+2021-08-17 00:31:45 [cluster-ClusterId{value='611ab618b02c7065708d9428', description='null'}-3.141.196.221:27017] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:3, serverValue:244}] to 3.141.196.221:27017
+2021-08-17 00:31:45 [cluster-ClusterId{value='611ab618b02c7065708d9428', description='null'}-3.141.196.221:27017] INFO  org.mongodb.driver.cluster -
+                Monitor thread successfully connected to server with description ServerDescription{address=3.141.196.221:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=305113800}
+2021-08-17 00:39:01 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-17 00:39:01 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2021-08-17 00:39:01 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 6 ms
+2021-08-17 00:39:23 [http-nio-8082-exec-3] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:4, serverValue:245}] to 3.141.196.221:27017
+2021-08-17 00:39:23 [http-nio-8082-exec-3] INFO  c.e.m.s.s.i.StockExchangeServiceImpl -
+                StockExchange List from database []
+2021-08-17 00:39:23 [http-nio-8082-exec-3] INFO  c.e.m.s.controller.StockController -
+                Provided CompanyCode doesnot exists in DB
+2021-08-17 00:39:46 [http-nio-8082-exec-6] INFO  c.e.m.s.s.i.StockExchangeServiceImpl -
+                After Converting to DTO {"id":null,"price":120.0,"stockCreatedDate":{"year":2021,"monthValue":8,"dayOfMonth":17,"hour":0,"minute":39,"second":46,"nano":924314600,"month":"AUGUST","dayOfWeek":"TUESDAY","dayOfYear":229,"chronology":{"id":"ISO","calendarType":"iso8601"}},"companyCode":"v"}
+2021-08-17 00:39:47 [http-nio-8082-exec-6] INFO  c.e.m.s.controller.StockController -
+                Saved SuccessFully
+2021-08-17 00:39:47 [http-nio-8082-exec-6] INFO  c.e.m.s.controller.StockController -
+                Before Formatting
+2021-08-17 00:39:47 [http-nio-8082-exec-6] INFO  c.e.m.s.controller.StockController -
+                After Formatting 2021-08-17T00:39:46.924.92.9
+2021-08-17 00:39:47 [http-nio-8082-exec-6] INFO  c.e.m.s.controller.StockController -
+                Added Stock Price successfully : {"price":120.0,"stockCreatedDate":"2021-08-17T00:39:46.924.92.9","companyCode":"v"}
+2021-08-17 00:42:47 [http-nio-8082-exec-8] INFO  c.e.m.s.s.i.StockExchangeServiceImpl -
+                After Converting to DTO {"id":null,"price":120.0,"stockCreatedDate":{"year":2021,"monthValue":8,"dayOfMonth":17,"hour":0,"minute":42,"second":47,"nano":549362400,"month":"AUGUST","dayOfWeek":"TUESDAY","dayOfYear":229,"chronology":{"id":"ISO","calendarType":"iso8601"}},"companyCode":"tsd01"}
+2021-08-17 00:42:47 [http-nio-8082-exec-8] INFO  c.e.m.s.controller.StockController -
+                Saved SuccessFully
+2021-08-17 00:42:47 [http-nio-8082-exec-8] INFO  c.e.m.s.controller.StockController -
+                Before Formatting
+2021-08-17 00:42:47 [http-nio-8082-exec-8] INFO  c.e.m.s.controller.StockController -
+                After Formatting 2021-08-17T00:42:47.549.54.5
+2021-08-17 00:42:47 [http-nio-8082-exec-8] INFO  c.e.m.s.controller.StockController -
+                Added Stock Price successfully : {"price":120.0,"stockCreatedDate":"2021-08-17T00:42:47.549.54.5","companyCode":"tsd01"}
