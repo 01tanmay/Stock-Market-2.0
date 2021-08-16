@@ -1,0 +1,11 @@
+elasticsearch:
+E:\APPS\ELK\elasticsearch\bin
+elasticsearch.bat
+
+kibana:
+E:\APPS\ELK\kibana\bin
+kibana.bat
+
+logstash:
+E:\APPS\ELK\logstash\bin
+logstash -f logstash.conf

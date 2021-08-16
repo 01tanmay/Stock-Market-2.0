@@ -1,0 +1,81 @@
+<div class="container">
+        <div>
+                <h4>Add Company Details</h4>
+                <hr>
+        </div>
+        <div>
+                <form [formGroup]="form" (ngSubmit)="submitForm()">
+                        <div class="form-group">
+                                <label>Company Name<span>*</span></label>
+                                <input class="form-control" placeholder="Company Name" required="required"
+                                        formControlName="companyName">
+                        </div>
+                        <div class="form-group">
+                                <label>Company Code<span>*</span></label>
+                                <input class="form-control" placeholder="Company Code" required="required"
+                                        formControlName="companyCode">
+                        </div>
+                        <div class="form-group">
+                                <label>Company CEO<span>*</span></label>
+                                <input class="form-control" placeholder="Company CEO" required="required"
+                                        formControlName="companyCeo">
+                        </div>
+                        <div class="form-group">
+                                <label>Company Turnover<span>*</span></label>
+                                <input class="form-control" placeholder="Company Turnover" required="required"
+                                        formControlName="companyTurnover">
+                        </div>
+                        <div class="form-group">
+                                <label>Company Website<span>*</span></label>
+                                <input class="form-control" placeholder="Company Website" required="required"
+                                        formControlName="companyWebsite">
+                        </div>
+                        <div class="form-group">
+                                <label>Stock Price<span>*</span></label>
+                                <input class="form-control" placeholder="Stock Price" required="required"
+                                        formControlName="stockPrice">
+                        </div>
+                        <div class="form-group">
+                                <button class="btn-success btn">Submit</button>
+                        </div>
+                </form>
+        </div>
+        <div *ngIf="addCompanyDetailsFlag" class="container">
+                <table>
+                        <h4>Company Details Added Successfully</h4>
+                        <hr>
+                        <tr>
+                                <td>Company Name</td>
+                                <td>{{companyResponse.companyName}}</td>
+                        </tr>
+                        <tr>
+                                <td>Company Code</td>
+                                <td>{{companyResponse.companyCode}}</td>
+                        </tr>
+                        <tr>
+                                <td>Company CEO</td>
+                                <td>{{companyResponse.companyCeo}}</td>
+                        </tr>
+                        <tr>
+                                <td>Company TurnOver</td>
+                                <td>{{companyResponse.companyTurnOver}}</td>
+                        </tr>
+                        <tr>
+                                <td>Company Website</td>
+                                <td>{{companyResponse.companyWebsite}}</td>
+                        </tr>
+                        <tr *ngFor="let stock of companyResponse.stockExchanges">
+                                <td>Stock Price</td>
+                                <td>{{stock.price}}</td>
+                        </tr>
+                        <tr *ngFor="let stock of companyResponse.stockExchanges">
+                                <td>StockCreatedDate</td>
+                                <td>{{stock.stockCreatedDate}}</td>
+                        </tr>
+                </table>
+        </div>
+        <div *ngIf="errorFlag" class="offset-md-3 col-md-6 alert alert-danger row justify-content-center" role="alert">
+                {{ errorMsg.message}}
+        </div>
+</div>
+<div class="clear"></div>

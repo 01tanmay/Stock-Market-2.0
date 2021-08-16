@@ -1,0 +1,17 @@
+{
+	"ulid": "01FBRYR3EYWDR49188JXKSV1DY",
+	"minTime": 1627545601978,
+	"maxTime": 1627552800000,
+	"stats": {
+		"numSamples": 271296,
+		"numSeries": 576,
+		"numChunks": 2088
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01FBRYR3EYWDR49188JXKSV1DY"
+		]
+	},
+	"version": 1
+}

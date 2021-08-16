@@ -1,0 +1,170 @@
+2021-08-11 15:23:08 [main] INFO  c.m.d.DiscoveryServerApplication -
+                No active profile set, falling back to default profiles: default
+2021-08-11 15:23:09 [main] WARN  o.s.boot.actuate.endpoint.EndpointId -
+                Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-08-11 15:23:09 [main] INFO  o.s.cloud.context.scope.GenericScope -
+                BeanFactory id=b40aec2d-9136-38b5-a8cb-e9dbb8b8e12b
+2021-08-11 15:23:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8761 (http)
+2021-08-11 15:23:10 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8761"]
+2021-08-11 15:23:10 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2021-08-11 15:23:10 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-08-11 15:23:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2021-08-11 15:23:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 1789 ms
+2021-08-11 15:23:10 [main] WARN  c.n.c.sources.URLConfigurationSource -
+                No URLs will be polled as dynamic configuration sources.
+2021-08-11 15:23:10 [main] INFO  c.n.c.sources.URLConfigurationSource -
+                To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-11 15:23:10 [main] INFO  c.n.config.DynamicPropertyFactory -
+                DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4bf80c29
+2021-08-11 15:23:11 [main] INFO  c.s.j.s.i.a.WebApplicationImpl -
+                Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2021-08-11 15:23:11 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+                Using JSON encoding codec LegacyJacksonJson
+2021-08-11 15:23:11 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+                Using JSON decoding codec LegacyJacksonJson
+2021-08-11 15:23:11 [main] ERROR o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Exception starting filter [servletContainer]
+java.lang.ExceptionInInitializerError: null
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:990)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:593)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:515)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:484)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:430)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:397)
+	at com.netflix.discovery.converters.XmlXStream.<init>(XmlXStream.java:51)
+	at com.netflix.discovery.converters.XmlXStream.<clinit>(XmlXStream.java:42)
+	at com.netflix.discovery.converters.wrappers.CodecWrappers$XStreamXml.<init>(CodecWrappers.java:358)
+	at com.netflix.discovery.converters.wrappers.CodecWrappers.create(CodecWrappers.java:133)
+	at com.netflix.discovery.converters.wrappers.CodecWrappers.getEncoder(CodecWrappers.java:75)
+	at com.netflix.discovery.converters.wrappers.CodecWrappers.getEncoder(CodecWrappers.java:66)
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:77)
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:64)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:350)
+	at java.base/java.lang.Class.newInstance(Class.java:642)
+	at com.sun.jersey.core.spi.component.ComponentConstructor._getInstance(ComponentConstructor.java:193)
+	at com.sun.jersey.core.spi.component.ComponentConstructor.getInstance(ComponentConstructor.java:180)
+	at com.sun.jersey.core.spi.component.ProviderFactory.__getComponentProvider(ProviderFactory.java:166)
+	at com.sun.jersey.core.spi.component.ProviderFactory._getComponentProvider(ProviderFactory.java:159)
+	at com.sun.jersey.core.spi.component.ProviderFactory.getComponentProvider(ProviderFactory.java:153)
+	at com.sun.jersey.core.spi.component.ProviderServices.getComponent(ProviderServices.java:278)
+	at com.sun.jersey.core.spi.component.ProviderServices.getProviders(ProviderServices.java:151)
+	at com.sun.jersey.core.spi.factory.MessageBodyFactory.initReaders(MessageBodyFactory.java:175)
+	at com.sun.jersey.core.spi.factory.MessageBodyFactory.init(MessageBodyFactory.java:162)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._initiate(WebApplicationImpl.java:1338)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.access$700(WebApplicationImpl.java:180)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl$13.f(WebApplicationImpl.java:799)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl$13.f(WebApplicationImpl.java:795)
+	at com.sun.jersey.spi.inject.Errors.processWithErrors(Errors.java:193)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiate(WebApplicationImpl.java:795)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiate(WebApplicationImpl.java:790)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.initiate(ServletContainer.java:509)
+	at com.sun.jersey.spi.container.servlet.ServletContainer$InternalWebComponent.initiate(ServletContainer.java:339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.load(WebComponent.java:605)
+	at com.sun.jersey.spi.container.servlet.WebComponent.init(WebComponent.java:207)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:394)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:744)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4528)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5165)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.market.discoveryserver.DiscoveryServerApplication.main(DiscoveryServerApplication.java:14)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @7a419da4
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:177)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:171)
+	at com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:40)
+	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50)
+	... 84 common frames omitted
+2021-08-11 15:23:11 [main] ERROR o.a.catalina.core.StandardContext -
+                One or more Filters failed to start. Full details will be found in the appropriate container log file
+2021-08-11 15:23:11 [main] ERROR o.a.catalina.core.StandardContext -
+                Context [] startup failed due to previous errors
+2021-08-11 15:23:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8761"]
+2021-08-11 15:23:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Pausing ProtocolHandler ["http-nio-8761"]
+2021-08-11 15:23:11 [main] INFO  o.a.catalina.core.StandardService -
+                Stopping service [Tomcat]
+2021-08-11 15:23:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Stopping ProtocolHandler ["http-nio-8761"]
+2021-08-11 15:23:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Destroying ProtocolHandler ["http-nio-8761"]
+2021-08-11 15:23:11 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+                Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-08-11 15:23:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+                
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-11 15:23:11 [main] ERROR o.s.boot.SpringApplication -
+                Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.market.discoveryserver.DiscoveryServerApplication.main(DiscoveryServerApplication.java:14)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[] failed to start
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:187)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 14 common frames omitted

@@ -1,0 +1,95 @@
+Step1: Install java and its Dependencies
+
+SSH into device
+java -version
+sudo yum -y install java-1.8.0-openjdk
+java -version
+
+Step2: Install java and its Dependencies
+
+sudo su
+yum install -y
+cd /root
+wget  https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.noarch.rpm
+yum install elasticsearch-1.7.2.noarch.rpm -y
+rm -f elasticsearch-1.7.2.noarch.rpm
+
+Step3: Start the Server
+
+service elasticsearch start
+
+Step4: Automatically Boot u on start
+
+Use the chkconfig command to configure Elasticsearch to start automatically when the system boots up
+sudo chkconfig --add elasticsearch
+
+Step5: Configuring AWS IP so you can access using public IP
+
+echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
+
+Step6:Install Plugins
+
+cd /usr/share/elasticsearch/
+./bin/plugin -install mobz/elasticsearch-head
+./bin/plugin -install lukas-vlcek/bigdesk
+./bin/plugin install elasticsearch/elasticsearch-cloud-aws/2.7.1
+./bin/plugin --install lmenezes/elasticsearch-kopf/1.5.7
+
+Step7: Configure to talk to logstash
+cd /etc/elasticsearch
+nano elasticsearch.yml
+*************
+cluster.name: elasticsearch
+cloud.aws.access_key: AKIA4FSN4I3OELDJLARF
+cloud.aws.secret_key: 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
+cloud.aws.region: us-east-2
+discovery.type: ec2
+discovery.ec2.tag.Name: "Elasticsearch for Stock Market Application"
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+network.host: 0.0.0.0
+*************
+Ctrl + x to exit
+
+Step 8: Start Elastic Search service on EC2
+
+service elasticsearch start
+chk if started: curl -X GET "localhost:9200/?pretty"
+
+Step 9: Install Logstack
+
+cd /root
+wget https://download.elastic.co/logstash/logstash/packages/centos/logstash-1.5.4-1.noarch.rpm
+yum install logstash-1.5.4-1.noarch.rpm -y
+
+Step 10: Configure to talk to Elastic Search
+
+nano /etc/logstash/conf.d/logstash.conf
+********
+input { file { path => "/tmp/logstash.txt" } } output { elasticsearch { host => "ec2-18-221-2-242.us-east-2.compute.amazonaws.com " protocol => "http" } }
+********
+Ctrl + x to exit
+
+Step 11: Start Logstash service on EC2
+service logstash start
+
+check by putting data in log file manually: echo "demo data" >> /tmp/logstash.yml
+
+Step 12:Install Kibana
+
+sudo su
+yum update -y
+cd /root
+wget https://download.elastic.co/kibana/kibana/kibana-4.1.2-linux-x64.tar.gz
+tar xzf kibana-4.1.2-linux-x64.tar.gz: uncompress
+rm -f kibana-4.1.2-linux-x64.tar.gz: remove
+
+Step 13: Configure Elastic Search server
+
+cd kibana-4.1.2-linux-x64
+nano config/kibana.yml
+elasticsearch_url: "ec2-3-14-150-134.us-east-2.compute.amazonaws.com:9200"
+
+Step 14: configure kibana to run in background:
+nohup ./bin/kibana &
+

@@ -1,0 +1,11 @@
+<div class="container">
+    <h4>Enter CompanyCode to Delete</h4>
+    <hr>
+    <div>
+        <input type="text" name="companycode" placeholder="companycode" [(ngModel)]="companyCode" />
+        <button class="btn btn-primary btn-sm" (click)="deleteCompany()">Submit</button>
+    </div>
+    <div *ngIf="errorFlag" class="offset-md-3 col-md-6 alert alert-danger row justify-content-center" role="alert">
+        {{ errorMsg.message}}
+    </div>
+</div>

@@ -1,0 +1,51 @@
+
+version: '3'
+services:
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.1
+    container_name: elasticsearch
+    restart: unless-stopped
+    ports:
+      - "9200:9200"
+    environment:
+      cluster.name: docker-stock-market-cluster
+      discovery.type: single-node
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    healthcheck:
+      test: "curl -f http://localhost:9200 || exit 1"
+      start_period: 30s
+ 
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.1
+    container_name: kibana
+    restart: unless-stopped
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: "curl -f http://localhost:5601 || exit 1"
+      start_period: 30s
+      
+  #logstash:
+  #  image: docker.elastic.co/logstash/logstash:7.13.1
+  # container_name: logstash
+  #  restart: unless-stopped
+  #  ports:
+  #    - "9600:9600"
+  #  volumes:
+  #    #- ./monitoring/logstash/pipeline:/logstash/pipeline/
+  #   - ./monitoring/logstash/pipeline:/usr/share/logstash/pipeline/
+  #  depends_on:
+  #    - elasticsearch
+  #  healthcheck:
+  #    test: "curl -f http://localhost:9600 || exit 1"
+  #    start_period: 30s

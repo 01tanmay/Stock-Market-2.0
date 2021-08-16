@@ -1,0 +1,29 @@
+Repository Description
+
+Zuul API-Gatway: 8080 -> 
+
+User Auth with JWT: 8081 -> Aurora/MySQL
+-> http://18.116.200.244:8081/
+
+Stock-Details Service: 8082 -> AWS DocumentDB
+
+Company-Details Service: 8083 -> AWS DocumentDB
+
+Eureka Discovery-Server: 8761 -> 
+
+Angular : 4200 ->
+http://stockmarket-ui1.s3-website.ap-south-1.amazonaws.com/login
+
+Logstash Server: 9600 -> AWS EC2
+http://ec2-3-14-150-134.us-east-2.compute.amazonaws.com:9600/
+
+ElasticSearch Server: 9200 -> AWS EC2
+http://ec2-3-14-150-134.us-east-2.compute.amazonaws.com:9200/
+
+Kibana Console: 5601 -> AWS EC2
+http://ec2-3-14-150-134.us-east-2.compute.amazonaws.com:5601/
+
+mongo: 27017
+ec2-user@ec2-3-141-196-221.us-east-2.compute.amazonaws.com
+
+SQL: 3306

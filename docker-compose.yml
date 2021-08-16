@@ -1,0 +1,154 @@
+
+version: '3'
+services:
+
+  api-gateway:
+     image: 01tanmay/fse-a2m:api-gateway
+     restart: on-failure
+     #network_mode: host
+     container_name: api-gateway
+     #depends_on: 
+     # - mongo
+     ports:
+      - 8080:8080
+      
+  user-auth:
+    image: 01tanmay/fse-a2m:user-auth
+    restart: on-failure
+    #network_mode: host
+    container_name: user-auth
+    #depends_on: 
+    #  - mysql
+    ports:
+      - 8081:8081
+    #build:
+    #    context:"./"
+    #    dockerfile:"Dockerfile"
+    #envronment:
+    #    SPRING_DATASOURCE_URL:
+
+  stock-service:
+     image: 01tanmay/fse-a2m:stock-service
+     restart: on-failure
+     #network_mode: host
+     container_name: stock-service
+     #depends_on: 
+     # - mongo
+     ports:
+      - 8082:8082
+      
+  company-service:
+     image: 01tanmay/fse-a2m:company-service
+     restart: on-failure
+     #network_mode: host
+     container_name: company-service
+     #depends_on: 
+     # - mongo
+     ports:
+      - 8083:8083
+  
+  eureka-server:
+     image: 01tanmay/fse-a2m:eureka-server
+     restart: on-failure
+     #network_mode: host
+     container_name: eureka-server
+     #depends_on: 
+     #- mongo
+     ports:
+      - 8761:8761
+      
+  #mysql:
+    #image: mysql:latest
+    #ports:
+     # - 3306:3306
+    #network_mode: host
+    #environment: 
+      #MYSQL_ROOT_PASSWORD: root
+      #MYSQL_HOST: localhost
+      #MYSQL_DATABASE: ftb15
+      #MYSQL_USER: root
+      #MYSQL_PASSWORD: root
+      #MYSQL_URL: jdbc:mysql://localhost:3306/ftb15
+
+  mongo:
+    image: mongo
+    restart: always
+    ports: 
+     - 27017:27017
+    container_name: mongo
+    #network_mode: host
+
+  prometheus:
+    image: "prom/prometheus"
+    container_name: prometheus
+    restart: unless-stopped
+    volumes:
+      - ./monitoring/prometheus:/prometheus
+    ports:
+      - 9090:9090
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "9090" ]
+      start_period: 30s
+  
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    environment:
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./monitoring/grafana/provisioning:/grafana/provisioning
+    depends_on:
+      - prometheus
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "3000" ]
+      start_period: 30s
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.1
+    container_name: elasticsearch
+    restart: unless-stopped
+    ports:
+      - "9200:9200"
+    environment:
+      cluster.name: docker-stock-market-cluster
+      discovery.type: single-node
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    healthcheck:
+      test: "curl -f http://localhost:9200 || exit 1"
+      start_period: 30s
+ 
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.1
+    container_name: kibana
+    restart: unless-stopped
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: "curl -f http://localhost:5601 || exit 1"
+      start_period: 30s
+      
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.13.1
+    container_name: logstash
+    restart: unless-stopped
+    ports:
+      - "9600:9600"
+    volumes:
+      - ./monitoring/logstash/pipeline:/logstash/pipeline/
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: "curl -f http://localhost:9600 || exit 1"
+      start_period: 30s

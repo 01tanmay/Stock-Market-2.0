@@ -1,0 +1,49 @@
+<div class="container">
+    <div>
+        <h4> All Company Details</h4>
+        <hr>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Company Code</th>
+                    <th>Company CEO</th>
+                    <th>Company TurnOVer</th>
+                    <th>Company Website</th>
+                    <th>Stock Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let comp of companyInfos">
+                    <td>{{comp.companyName}}</td>
+                    <td>{{comp.companyCode}}</td>
+                    <td>{{comp.companyCeo}}</td>
+                    <td>{{comp.companyTurnOver}}</td>
+                    <td>{{comp.companyWebsite}}</td>
+                    <td>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Price</th>
+                                    <th>CreatedDate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let stock of comp.stockExchanges">
+                                    <td>{{stock.price}}</td>
+                                    <td>{{stock.stockCreatedDate}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="errorFlag" class="offset-md-3 col-md-6 alert alert-danger row justify-content-center" role="alert">
+        {{ errorMsg.message}}
+    </div>
+</div>
+<div class="clear"></div>

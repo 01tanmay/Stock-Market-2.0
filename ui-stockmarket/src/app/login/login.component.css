@@ -1,0 +1,11 @@
+.centered {
+    position: fixed;
+    top: 50%;
+    left:40%;
+}
+
+.input {
+    margin-bottom: 10px;
+    text-size-adjust: 50%;
+    text-decoration-color: black;
+}

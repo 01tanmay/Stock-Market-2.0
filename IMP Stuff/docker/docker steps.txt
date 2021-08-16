@@ -1,0 +1,31 @@
+1. CREATE PACKAGE
+-> mvn clean
+-> mvn package
+
+2. BUILD/CREATE IMAGES
+-> docker build -t user-auth .
+-> docker build -t stock-service .
+-> docker build -t company-service .
+-> docker build -t api-gateway .
+-> docker build -t eureka-server .
+
+3. TAG IMAGES
+->docker tag user-auth 01tanmay/stockmarket:user-auth
+->docker tag stock-service 01tanmay/stockmarket:stock-service
+->docker tag company-service 01tanmay/stockmarket:company-service
+->docker tag api-gateway 01tanmay/stockmarket:api-gateway
+->docker tag eureka-server 01tanmay/stockmarket:eureka-server
+
+4. PUSH IMAGES TO DOCKERHUB REPO(stockmarket)
+docker push 01tanmay/stockmarket:user-auth
+docker push 01tanmay/stockmarket:stock-service
+docker push 01tanmay/stockmarket:company-service
+docker push 01tanmay/stockmarket:api-gateway
+docker push 01tanmay/stockmarket:eureka-server
+
+5. ECS Container create from DockerHub image
+docker.io/01tanmay/stockmarket:stock-service
+docker.io/01tanmay/stockmarket:company-service
+docker.io/01tanmay/stockmarket:user-auth
+docker.io/01tanmay/stockmarket:api-gateway
+docker.io/01tanmay/stockmarket:eureka-server

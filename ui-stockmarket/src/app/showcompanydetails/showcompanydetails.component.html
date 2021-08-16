@@ -1,0 +1,51 @@
+<div class="container">
+    <div>
+        <h4>Company Code search Results</h4>
+        <hr>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td><b>Company Code</b></td>
+                <td>{{compResponse.companyCode}}</td>
+            </tr>
+            <tr>
+                <td><b>FROM</b></td>
+                <td>{{compResponse.fromDate}}</td>
+            </tr>
+            <tr>
+                <td><b>To</b></td>
+                <td>{{compResponse.toDate}}</td>
+            </tr>
+        </table>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th><b>Stock Price</b></th>
+                    <th><b>Date</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stock of compResponse.stockExchanges">
+                    <td>{{stock.price}}</td>
+                    <td>{{stock.stockCreatedDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td><b>MIN</b></td>
+                <td>{{compResponse.minStockPrice}}</td>
+            </tr>
+            <tr>
+                <td><b>MAX</b></td>
+                <td>{{compResponse.maxStockPrice}}</td>
+            </tr>
+            <tr>
+                <td><b>AVG</b></td>
+                <td>{{compResponse.averageStockPrice}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="clear"></div>

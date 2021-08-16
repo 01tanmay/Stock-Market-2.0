@@ -1,0 +1,13 @@
+wget http://www-us.apache.org/dist/kafka/2.7.0/kafka_2.13-2.7.0.tgz
+
+tar -xvf kafka_2.13-2.7.0.tgz
+rm kafka_2.13-2.7.0.tgz
+
+ln -s kafka_2.13-2.7.0.tgz kafka
+
+
+ref:
+
+https://www.devglan.com/corejava/apache-kafka-java-example
+https://www.devglan.com/apache-kafka/stream-log4j-logs-to-kafka#/google_vignette
+https://www.devglan.com/apache-kafka/kafka-elasticsearch-logstash-example

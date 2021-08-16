@@ -1,0 +1,37 @@
+configure:
+->aws configure
+
+DocumentDB:
+->aws dynamodb create-table \
+    --table-name company-service\
+    --attribute-definitions \
+        AttributeName=Id,AttributeType=S \
+        AttributeName=companyCode,AttributeType=S \
+    --key-schema AttributeName=Id,KeyType=HASH AttributeName=turnover,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+
+Aurora:
+->aws rds create-db-cluster --db-cluster-identifier stock-market-cluster --engine aurora-mysql ^
+    --engine-version 5.7.12 --master-username tanmay --master-user-password tanmay^
+    --db-subnet-group-name mysubnetgroup --vpc-security-group-ids sg-c7e5b0d2
+
+S3:(angular app deploy as dynamic website)
+
+create bucket:
+->aws s3api create-bucket --bucket stockmarket-ui1 --region us-east-2
+
+make build & deploy changes to S3
+-> ng build && npm run aws-deploy
+
+ECS:
+
+Cluster Configuration:
+-> ecs-cli configure --cluster stock-market-cluster --region us-east-2 --default-launch-type EC2 --config-name stock-market-cluster
+Profile Configuration:
+-> ecs-cli configure profile --access-key AKIA4FSN4I3OELDJLARF --secret-key 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 --profile-name stock-market-cluster
+(Cluster Creation)ecs up from cloudformation
+-> ecs-cli up --vpc vpc-ee07a3 --keypair ecs-kp --capability-iam --size 2 --instance-type t2.micro --cluster-config stock-market-cluster --subnets subnet-02due309fff3cwq7, subnet-8h74g333g4e776d3
+create task definition & run container:
+-> ecs-cli compose up --create-log-groups --cluster-config stock-market-cluster
+check status of clusters:
+-> aws-cli ps --cluster stock-market-cluster

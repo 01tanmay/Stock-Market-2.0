@@ -1,0 +1,9 @@
+1. ng build
+-> will create dist folder for deploying app anywhere
+
+2. make changes in package.json
+add "aws-deploy"
+eg: "aws-deploy": "aws s3 sync dist/<folderName>/ s3://<buckerName>"
+
+3. make new build after changes and auto-deploy in aws s3
+ng build && npm run aws-deploy

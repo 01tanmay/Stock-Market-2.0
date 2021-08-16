@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="centered">
+        <div>User Name : <input type="text" name="username" [(ngModel)]="username"></div>
+        <div>Password : <input type="password" name="password" [(ngModel)]="password"></div>
+        <div class="alert alert-warning" *ngIf="invalidLogin"> Invalid Credentials</div>
+        <button class="btn btn-success" (click)="handleLogin()">Login</button>
+    </div>
+</div>

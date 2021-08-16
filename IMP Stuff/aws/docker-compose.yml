@@ -1,0 +1,27 @@
+version: '3'
+services:
+   stock-service:
+     image: 01tanmay/fse-a2m:stock-service
+     restart: on-failure
+     container_name: stock-service
+     ports:
+      - 8082:8082
+     logging:
+        driver: aws logs
+        options:
+            awslogs-group: stock-market-cluster
+            awslogs-region: us-east-2
+            awslogs-stream-prefix: stock-service
+      
+  company-service:
+     image: 01tanmay/fse-a2m:company-service
+     restart: on-failure
+     container_name: company-service
+     ports:
+      - 8083:8083
+     logging:
+        driver: aws logs
+        options:
+            awslogs-group: stock-market-cluster
+            awslogs-region: us-east-2
+            awslogs-stream-prefix: stock-service

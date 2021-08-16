@@ -1,0 +1,27 @@
+angular deploy to s3:
+https://www.youtube.com/watch?v=ZkYsMBNR_eY&t=3s
+https://www.youtube.com/watch?v=CKJoNI4Ypxw
+
+aws api gateway:
+https://www.youtube.com/watch?v=OOpysRU5TXQ
+https://www.youtube.com/watch?v=3iwItfr4N38&t=202s
+
+elk:
+
+grafana:
+
+promotheus:
+
+aws cognito:
+
+ecs:
+https://www.youtube.com/watch?v=z7_LdCVnCRU&t=9s
+https://www.youtube.com/watch?v=z7_LdCVnCRU
+https://www.youtube.com/watch?v=mbtU-5fXXiw
+https://www.youtube.com/watch?v=o_qSS4S1g34
+
+ecr:
+https://www.youtube.com/watch?v=XrJ-DTmP5bs&t=692s
+
+aws cli:
+https://www.youtube.com/watch?v=1sFNTKmy2SA

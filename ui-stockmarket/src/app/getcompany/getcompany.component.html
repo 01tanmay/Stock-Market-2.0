@@ -1,0 +1,45 @@
+<div class="container">
+    <h4>Enter CompanyCode to Search</h4>
+    <hr>
+    <div>
+        <input type="text" name="companycode" placeholder="companycode" [(ngModel)]="companyCode" />
+        <button class="btn btn-primary btn-sm" (click)="retrieveCompany()">Search</button>
+    </div>
+    <div *ngIf="getCompanyDetailsFlag" class="container">
+        <table>
+            <h4>Details Of Company</h4>
+            <hr>
+            <tr>
+                <td>Company Name</td>
+                <td>{{companyResponse.companyName}}</td>
+            </tr>
+            <tr>
+                <td>Company Code</td>
+                <td>{{companyResponse.companyCode}}</td>
+            </tr>
+            <tr>
+                <td>Company CEO</td>
+                <td>{{companyResponse.companyCeo}}</td>
+            </tr>
+            <tr>
+                <td>Company TurnOver</td>
+                <td>{{companyResponse.companyTurnOver}}</td>
+            </tr>
+            <tr>
+                <td>Company Website</td>
+                <td>{{companyResponse.companyWebsite}}</td>
+            </tr>
+            <tr *ngFor="let stock of companyResponse.stockExchanges">
+                <td>Stock Price</td>
+                <td>{{stock.price}}</td>
+            </tr>
+            <tr *ngFor="let stock of companyResponse.stockExchanges">
+                <td>StockCreatedDate</td>
+                <td>{{stock.stockCreatedDate}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="errorFlag" class="offset-md-3 col-md-6 alert alert-danger row justify-content-center" role="alert">
+        {{ errorMsg.message }}
+    </div>
+</div>

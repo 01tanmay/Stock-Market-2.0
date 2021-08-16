@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+        <h4> Add New Stock</h4>
+        <hr>
+    </div>
+    <div>
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label>Company Code<span>*</span></label>
+                <input class="form-control" placeholder="Company Code" required="required" formControlName="companyCode">
+            </div>
+            <div class="form-group">
+                <label>Stock Price<span>*</span></label>
+                <input class="form-control" placeholder= "Stock Price" required="required" formControlName="stockPrice">
+            </div>
+            <div>
+                <button class="btn btn-primary btn-sm">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="stockDetailsFlag" class="container">
+        <table>
+            <h4>Stock Details Added Successfully</h4>
+            <hr>
+            <tr>
+                <td>Company Code</td>
+                <td>{{stockResponse.companyCode}}</td>
+            </tr>
+            <tr>
+                <td>Stock Price</td>
+                <td>{{stockResponse.price}}</td>
+            </tr>
+            <tr>
+                <td>Stock CreatedDate</td>
+                <td>{{stockResponse.stockCreatedDate}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="errorFlag" class="offset-md-3 col-md-6 alert alert-danger row justify-content-center" role="alert">
+        {{ errorMsg.message}}
+</div>
+</div>
+<div class="clear"></div>
