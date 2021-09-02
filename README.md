@@ -116,3 +116,5 @@ GetAllCompanyDetails :  https://wwvmzopnwl.execute-api.us-east-2.amazonaws.com/p
 
 Signin: https://2isscj877k.execute-api.us-east-2.amazonaws.com/prod/authservice
 Signup: https://2isscj877k.execute-api.us-east-2.amazonaws.com/prod/auth-service
+
+gave demo by this, taken some part from other's git
