@@ -46,21 +46,19 @@ Services:
 11. Promethus
    => Port : 9090
    => Url  : http://localhost:9090/
-   => Steps: 1) docker run -p 9090:9090 -v /C:/prometheus.yml prom/prometheus
-			 2) select any metric and execute
- 
+   => Steps: 1) C:\Users\User\Documents\prometheus-2.28.1.windows-amd64
+             2) prometheus.exe --config.file=company-app.yml
+
 12. Grafana
    => Port : 3123  [3000 is the default, but some other service is running]
-   => Url  : http://localhost:3000
-   => Steps: 1) docker run -d --name=grafana-fse -p 3000:3000 grafana/grafana
-			 2) admin/admin
+   => Url  : http://localhost:3123
+   => Steps: C:\Users\User\Downloads\grafana-8.0.5\bin => grafana-server.exe
 
 13. sonarcube
    => Port : 9000
-   => Url  : http://localhost:9004/
-   => Steps: 1) C:\sonarqube\bin\windows-x86-64\ => StartSonar.bat
-             2) clean org.jacoco:jacoco-maven-plugin:prepare-agent install
-			 3) sonar:sonar
+   => Url  : http://localhost:9000/
+   => Steps: 1) Go to C:\sonarqube\bin\windows-x86-64 => StartSonar.bat
+             2)
 			 
 ===================
 {
@@ -119,32 +117,4 @@ GetAllCompanyDetails :  https://wwvmzopnwl.execute-api.us-east-2.amazonaws.com/p
 Signin: https://2isscj877k.execute-api.us-east-2.amazonaws.com/prod/authservice
 Signup: https://2isscj877k.execute-api.us-east-2.amazonaws.com/prod/auth-service
 
-
-Stock Market 2.0 is a Java-based web application designed to provide users with real-time stock market data and analysis tools.
-Developed using Java technologies such as Spring Boot & Angular this project aims to offer a comprehensive platform for tracking stocks, analyzing market trends, 
-and making informed investment decisions.
-
-Key Features:
-Real-time Data: Utilizes APIs to fetch real-time stock market data from leading financial sources, ensuring accuracy and timeliness.
-User Authentication: Implements secure user authentication and authorization functionalities to protect user data and ensure privacy.
-Interactive Dashboard: Offers an intuitive and user-friendly dashboard where users can view their portfolio, watchlist, and personalized market insights.
-Advanced Analytics: Provides a range of analytical tools and charts to help users analyze stock performance, track market trends, and make data-driven investment decisions.
-Customizable Alerts: Enables users to set up personalized alerts for price changes, news updates, and other market events, ensuring they stay informed and proactive.
-Technologies Used:
-
-Java: Backend development using Java programming language.
-Spring Boot: Framework for building robust and scalable Java applications.
-Thymeleaf: Server-side Java template engine for dynamic web content generation.
-Bootstrap: Frontend framework for responsive and mobile-first web development.
-RESTful APIs: Integration with external APIs to fetch real-time stock market data.
-Future Enhancements:
-
-Implement additional features such as stock screener, backtesting tools, and social integration.
-Enhance user experience with responsive design, mobile app development, and multi-platform support.
-Introduce machine learning algorithms for predictive analytics and personalized recommendations.
-Contributions:
-
-This project welcomes contributions from the developer community. Feel free to submit pull requests, report issues, or suggest new features.
-License:
-
-This project is licensed under the MIT License, granting users the freedom to use, modify, and distribute the software.
+Final Demo Repo
