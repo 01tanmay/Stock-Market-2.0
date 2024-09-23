@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       data => {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
+        sessionStorage.setItem('user', this.username);
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.reloadPage();
@@ -45,7 +46,7 @@ export class LoginComponent implements OnInit {
       
     );
     this.router.navigate(['welcome']);
-    sessionStorage.setItem('user', this.username);
+
   }
 
    reloadPage(): void {
