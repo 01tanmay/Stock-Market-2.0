@@ -1,0 +1,6 @@
+run:
+docker run -p 9090:9090 -v /C:/prometheus.yml prom/prometheus
+
+go to:
+-> localhost:9090
+-> select any metric and execute

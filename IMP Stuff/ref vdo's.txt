@@ -7,12 +7,10 @@ https://www.youtube.com/watch?v=OOpysRU5TXQ
 https://www.youtube.com/watch?v=3iwItfr4N38&t=202s
 
 elk:
+https://www.youtube.com/watch?v=5s9pR9UUtAU&t=5s
 
-grafana:
-
-promotheus:
-
-aws cognito:
+grafana & prometheus:
+https://www.youtube.com/watch?v=2wr9njNdywk
 
 ecs:
 https://www.youtube.com/watch?v=z7_LdCVnCRU&t=9s
@@ -25,3 +23,6 @@ https://www.youtube.com/watch?v=XrJ-DTmP5bs&t=692s
 
 aws cli:
 https://www.youtube.com/watch?v=1sFNTKmy2SA
+
+sonarqube:
+https://www.youtube.com/watch?v=hyBznKcoKEg

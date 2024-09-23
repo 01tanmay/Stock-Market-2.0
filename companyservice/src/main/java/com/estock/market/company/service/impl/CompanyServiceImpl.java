@@ -41,7 +41,6 @@ public class CompanyServiceImpl implements CompanyService {
 	 */
 	@Override
 	public CompanyDTO retrieveCompanyByCode(String companyCode) {
-
 		Optional<CompanyDTO> company = companyRepository.findByCompanyCode(companyCode);
 		if (company.isPresent()) {
 			return company.get();
